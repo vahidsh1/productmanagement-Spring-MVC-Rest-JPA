@@ -20,12 +20,12 @@ public class DigitalServiceImpl extends BaseServiceImpl<DigitalProduct> implemen
     }
 
     @Override
-    public void update(DigitalProduct digitalProductOld, DigitalProduct digitalProductFetched) {
-        digitalProductFetched.setRam(digitalProductOld.getRam());
-        digitalProductFetched.setPrice(digitalProductOld.getPrice());
-        digitalProductFetched.setBrand(digitalProductOld.getBrand());
-        digitalProductFetched.setCpuModel(digitalProductOld.getCpuModel());
-        digitalProductFetched.setUserNationalID(digitalProductOld.getUserNationalID());
+    public void update(DigitalProduct digitalProductNew, DigitalProduct digitalProductFetched) {
+        digitalProductFetched.setRam(digitalProductNew.getRam());
+        digitalProductFetched.setPrice(digitalProductNew.getPrice());
+        digitalProductFetched.setBrand(digitalProductNew.getBrand());
+        digitalProductFetched.setCpuModel(digitalProductNew.getCpuModel());
+        digitalProductFetched.setUserNationalID(digitalProductNew.getUserNationalID());
         repo.save(digitalProductFetched);
     }
 }
